@@ -1,23 +1,31 @@
 :root
 {
+
+    color-scheme: light dark;
+
     user-select: none;
 
-    --mainOrng: rgba(252, 176, 69, 1);
-    --mainPrpl: rgba(154, 31, 181, 1);
+    --mainOrng: light-dark(rgba(252, 176, 69, 1), rgba(131, 85, 20, 1));
+    --mainPrpl: light-dark(rgba(154, 31, 181, 1), rgba(85, 11, 102, 1));
     --mainGreen: rgb(48, 181, 31);
     --auxGreen: rgba(66, 141, 111, 0.379);
 
+    --gradientBG: light-dark(#aabd9e, #181b17);
+    --modalBG:  light-dark( rgba(255,255,255,0.6), rgba(40,40,40,0.6));
+
+    --fontColor: light-dark(#161616, #bbbbbb);
+
     --patternScale: 200px;
-    --patternDark1: #dad9d6;
-    --patternDark2: #dcdbd8;
-    --patternDark3: #deddda;
+    --patternDark1: light-dark(#bb9983, #151515);
+    --patternDark2: light-dark( #bd9b85, #181818);
+    --patternDark3:  light-dark(#bd9d87, #151515);
     --patternDark: repeating-conic-gradient(from 30deg,#0000 0 120deg,var(--patternDark3) 0 50%) 
         calc(var(--patternScale)/2) calc(var(--patternScale)*tan(30deg)/2),
         repeating-conic-gradient(from 30deg,var(--patternDark1) 0 60deg,var(--patternDark2) 0 120deg,var(--patternDark3) 0 50%);
 
-    --patternLight1: #f7f6f5;
-    --patternLight2: #f5f4f3;
-    --patternLight3: #f3f2f1;
+    --patternLight1: light-dark(#ddc2b0, #181818);
+    --patternLight2:light-dark( #dfc4b2,#1a1a1a);
+    --patternLight3:light-dark( #e2c6b4, #181818);
     --patternLight:
         repeating-conic-gradient(from 30deg,#0000 0 120deg,var(--patternLight3) 0 50%) 
         calc(var(--patternScale)/2) calc(var(--patternScale)*tan(30deg)/2),
@@ -35,6 +43,8 @@
     --projectGap: 2vw;
     --mask: linear-gradient(0deg, transparent, black 20%, black 80%, transparent);
     --gradient: linear-gradient(90deg, var(--mainPrpl) 0%, var(--mainOrng) 20%, var(--mainPrpl) 40%,var(--mainOrng) 60%,  var(--mainPrpl) 80%,var(--mainOrng) 100%);
+
+    color: var(--fontColor);
 }
 
 body
@@ -48,7 +58,7 @@ body
     position:absolute;
     top:0;
     left:0;
-    filter: blur(1.5rem);
+    filter: blur(5rem);
     height:100vh;
     width:100vw;
     animation: animateBG1;
@@ -66,7 +76,7 @@ body
     margin-inline: auto;
     margin-top: 30vh;
     width:60vw;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: var(--modalBG);
     border-radius: 2rem;
     box-shadow: 5px 10px 40px 10px rgba(40, 40, 40, 0.279);
 
@@ -94,7 +104,7 @@ body
 }
 #welcomeText
 {
-    color:#161616;
+    color: var(--fontColor);
     text-align: center;
     font-size: 1.5rem;
 }
@@ -120,7 +130,7 @@ body
     margin-top:2vw;
     width: fit-content;
     padding: 0.4rem 2.5rem;
-    background-color: rgba(255, 255, 255, 0.477);
+    background-color: var(--modalBG);
     border-radius: 1rem;
     box-shadow: 1px 3px 10px 1px rgba(40, 40, 40, 0.279);
     transition: all 0.15s ease-in-out;
@@ -151,16 +161,16 @@ body
     transform: rotate(0.3deg);
     /* specjalne tlo */
     --s: 108px;
-    --c1: #151515;
+    /* --c1: #151515;
     --c2: #161616;
-    --c3: #151515;
+    --c3: #151515; */
     --_g: 
-        var(--c2) 6%  14%,var(--c1) 16% 24%,var(--c2) 26% 34%,var(--c1) 36% 44%,
-        var(--c2) 46% 54%,var(--c1) 56% 64%,var(--c2) 66% 74%,var(--c1) 76% 84%,var(--c2) 86% 94%;
+        var(--patternDark2) 6%  14%,var(--patternDark1) 16% 24%,var(--patternDark2) 26% 34%,var(--patternDark1) 36% 44%,
+        var(--patternDark2) 46% 54%,var(--patternDark1) 56% 64%,var(--patternDark2) 66% 74%,var(--patternDark1) 76% 84%,var(--patternDark2) 86% 94%;
     background:
-        radial-gradient(100% 100% at 100% 0,var(--c1) 4%,var(--_g), var(--c3) 96%,#0000),
-        radial-gradient(100% 100% at 0 100%,#0000, var(--c3) 4%,var(--_g),var(--c1) 96%)
-        var(--c1);
+        radial-gradient(100% 100% at 100% 0,var(--patternDark1) 4%,var(--_g), var(--patternDark3) 96%,#0000),
+        radial-gradient(100% 100% at 0 100%,#0000, var(--patternDark3) 4%,var(--_g),var(--patternDark1) 96%)
+        var(--patternDark1);
     background-size: var(--s) var(--s);
 
 }
@@ -177,16 +187,16 @@ body
     border-inline: 1px dashed var(--mainGreen);
         /* specjalne tlo */
     --s: 108px;
-    --c1: #151515;
+    /* --c1: #151515;
     --c2: #1a1a1a;
-    --c3: #151515;
+    --c3: #151515; */
     --_g: 
-        var(--c2) 6%  14%,var(--c1) 16% 24%,var(--c2) 26% 34%,var(--c1) 36% 44%,
-        var(--c2) 46% 54%,var(--c1) 56% 64%,var(--c2) 66% 74%,var(--c1) 76% 84%,var(--c2) 86% 94%;
+        var(--patternLight2) 6%  14%,var(--patternLight1) 16% 24%,var(--patternLight2) 26% 34%,var(--patternLight1) 36% 44%,
+        var(--patternLight2) 46% 54%,var(--patternLight1) 56% 64%,var(--patternLight2) 66% 74%,var(--patternLight1) 76% 84%,var(--patternLight2) 86% 94%;
     background:
-        radial-gradient(100% 100% at 100% 0,var(--c1) 4%,var(--_g), var(--c3) 96%,#0000),
-        radial-gradient(100% 100% at 0 100%,#0000, var(--c3) 4%,var(--_g),var(--c1) 96%)
-        var(--c1);
+        radial-gradient(100% 100% at 100% 0,var(--patternLight1) 4%,var(--_g), var(--patternLight3) 96%,#0000),
+        radial-gradient(100% 100% at 0 100%,#0000, var(--patternLight3) 4%,var(--_g),var(--patternLight1) 96%)
+        var(--patternLight1);
     background-size: var(--s) var(--s);
 }
 #projectRoot
@@ -280,10 +290,10 @@ body
     margin: auto;
     z-index: 0;
     --clr: rgb(146, 146, 146);
-    color: var(--clr);
+    color: var(--fontColor);
     width: 30%;
     font-size: 4rem;
-    border-bottom: dashed 1px var(--clr);
+    border-bottom: dashed 1px var(--fontColor);
     border-radius: 1rem;
     text-align: center;
 }
@@ -345,7 +355,7 @@ body
     height:100vh;
     animation-duration: 0.6s;
     animation-fill-mode: forwards;
-    background-color: #aabd9e;
+    background-color: var(--gradientBG);
     overflow: hidden;
 }
 
@@ -383,8 +393,9 @@ body
     z-index: 0;
     animation-duration: 2s;
     animation-fill-mode: forwards;
-    background: var(--patternDark);
+    background: var(--patternDark1);
     background-size: var(--s) calc(var(--s)*tan(30deg));
+    
     
 }
 #hello
@@ -402,7 +413,7 @@ body
     border-radius: 0.5vw;
     animation-duration: 2s;
     animation-fill-mode: forwards;
-    background: var(--patternLight);
+    background: var(--patternLight1);
     background-size: var(--s) calc(var(--s)*tan(30deg));
 }
 
@@ -420,6 +431,22 @@ a
 {
     text-decoration: none;
     color:inherit;
+}
+
+#theme
+{
+    margin:auto;
+    margin-top:1rem;
+    width:fit-content;
+    text-align: center;
+    font-size: 3rem;
+    transition: 0.2s ease-in-out all;
+    border-radius: 10vw;
+}
+#theme:hover
+{
+    transform: scale(1.05);
+    box-shadow: 0px 2px 10px 1px var(--auxGreen);
 }
 
   /* Kod pobrany z CSS Plasma Background Generator
@@ -608,19 +635,19 @@ a
         z-index: 0;
         top: var(--cardTop);
         left: var(--cardRight);
-        background: var(--patternDark);
+        background: var(--patternDark1);
     }
     50%
     {
         z-index: 1;
         top: var(--cardUp);
         left: var(--cardRight);
-        background: var(--patternLight);
+        background: var(--patternLight1);
     }
     100%
     {
         top: 0vw;
-        background: var(--patternLight);
+        background: var(--patternLight1);
         z-index: 1;
         left: var(--cardLeft);
     }
@@ -632,21 +659,21 @@ a
     {
         left: var(--cardLeft);
         top: 0vw;
-        background: var(--patternLight);
+        background: var(--patternLight1);
         z-index: 1;
     }
     50%
     {
         left: var(--cardLeft);
         top: 0vw;
-        background: var(--patternDark);
+        background: var(--patternDark1);
         z-index: 0;
     }
     100%
     {
         top: var(--cardTop);
         left: var(--cardRight);
-        background: var(--patternDark);
+        background: var(--patternDark1);
         z-index: 0;
 
     }

@@ -4,31 +4,31 @@
     "description": "",
     "languages": [
       {
-        "size": 7003,
+        "size": 2465,
         "node": {
           "name": "HTML"
         }
       },
       {
-        "size": 27296,
+        "size": 14328,
         "node": {
           "name": "CSS"
         }
       },
       {
-        "size": 4156,
+        "size": 1848,
         "node": {
           "name": "JavaScript"
         }
       },
       {
-        "size": 4866,
+        "size": 5703,
         "node": {
           "name": "Python"
         }
       },
       {
-        "size": 469,
+        "size": 641,
         "node": {
           "name": "Shell"
         }
@@ -37,6 +37,33 @@
     "name": "HTML-Updater",
     "url": "https://github.com/Kamilek7/HTML-Updater",
     "images": "https://github.com/user-attachments/assets/2c22e355-0624-4c74-98ce-cf126f575dc9"
+  },
+  {
+    "createdAt": "2024-05-18T12:58:49Z",
+    "description": "",
+    "languages": [
+      {
+        "size": 4877,
+        "node": {
+          "name": "HTML"
+        }
+      },
+      {
+        "size": 2308,
+        "node": {
+          "name": "JavaScript"
+        }
+      },
+      {
+        "size": 14328,
+        "node": {
+          "name": "CSS"
+        }
+      }
+    ],
+    "name": "Kamilek7.github.io",
+    "url": "https://github.com/Kamilek7/Kamilek7.github.io",
+    "images": ""
   },
   {
     "createdAt": "2024-06-20T11:38:35Z",
@@ -232,20 +259,5 @@
     "name": "rogalTasks",
     "url": "https://github.com/Kamilek7/rogalTasks",
     "images": "https://github.com/user-attachments/assets/cb6a7e0f-f6d4-4df8-8bca-7fa99d7abaf0\nhttps://github.com/user-attachments/assets/65bc2d46-1521-4d3b-9fef-66289d784739"
-  },
-  {
-    "createdAt": "2024-05-18T12:58:49Z",
-    "description": "",
-    "languages": [
-      {
-        "size": 90,
-        "node": {
-          "name": "HTML"
-        }
-      }
-    ],
-    "name": "Kamilek7.github.io",
-    "url": "https://github.com/Kamilek7/Kamilek7.github.io",
-    "images": ""
   }
 ]

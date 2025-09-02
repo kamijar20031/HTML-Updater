@@ -1,0 +1,263 @@
+[
+  {
+    "createdAt": "2023-12-14T11:40:12Z",
+    "description": "",
+    "languages": [
+      {
+        "size": 2465,
+        "node": {
+          "name": "HTML"
+        }
+      },
+      {
+        "size": 14328,
+        "node": {
+          "name": "CSS"
+        }
+      },
+      {
+        "size": 1848,
+        "node": {
+          "name": "JavaScript"
+        }
+      },
+      {
+        "size": 5703,
+        "node": {
+          "name": "Python"
+        }
+      },
+      {
+        "size": 641,
+        "node": {
+          "name": "Shell"
+        }
+      }
+    ],
+    "name": "HTML-Updater",
+    "url": "https://github.com/Kamilek7/HTML-Updater",
+    "images": "https://github.com/user-attachments/assets/2c22e355-0624-4c74-98ce-cf126f575dc9"
+  },
+  {
+    "createdAt": "2024-05-18T12:58:49Z",
+    "description": "",
+    "languages": [
+      {
+        "size": 4877,
+        "node": {
+          "name": "HTML"
+        }
+      },
+      {
+        "size": 2308,
+        "node": {
+          "name": "JavaScript"
+        }
+      },
+      {
+        "size": 14328,
+        "node": {
+          "name": "CSS"
+        }
+      }
+    ],
+    "name": "Kamilek7.github.io",
+    "url": "https://github.com/Kamilek7/Kamilek7.github.io",
+    "images": ""
+  },
+  {
+    "createdAt": "2024-06-20T11:38:35Z",
+    "description": "cpp project from first year of cs - \"inspired\" by touhou ofc",
+    "languages": [
+      {
+        "size": 59486,
+        "node": {
+          "name": "C++"
+        }
+      }
+    ],
+    "name": "Danmaku-game-base",
+    "url": "https://github.com/Kamilek7/Danmaku-game-base",
+    "images": "https://github.com/user-attachments/assets/75e8d891-ae9f-47fe-83e9-c4aa98b06819\nhttps://github.com/user-attachments/assets/233e550e-072a-432a-a9af-853716269cbf"
+  },
+  {
+    "createdAt": "2024-10-14T11:55:58Z",
+    "description": "",
+    "languages": [
+      {
+        "size": 7230956,
+        "node": {
+          "name": "C++"
+        }
+      },
+      {
+        "size": 6222,
+        "node": {
+          "name": "GLSL"
+        }
+      },
+      {
+        "size": 1081458,
+        "node": {
+          "name": "C"
+        }
+      },
+      {
+        "size": 16420,
+        "node": {
+          "name": "Objective-C"
+        }
+      },
+      {
+        "size": 2668,
+        "node": {
+          "name": "CMake"
+        }
+      }
+    ],
+    "name": "CPP-Projekt",
+    "url": "https://github.com/Kamilek7/CPP-Projekt",
+    "images": "https://github.com/user-attachments/assets/31208df2-5071-4876-addc-074ef59ab638\nhttps://github.com/user-attachments/assets/cfc3b6fd-eb92-4e9d-b98d-ff9a7b5d6e8f"
+  },
+  {
+    "createdAt": "2024-08-15T17:39:52Z",
+    "description": "",
+    "languages": [
+      {
+        "size": 3840603,
+        "node": {
+          "name": "C++"
+        }
+      },
+      {
+        "size": 2876,
+        "node": {
+          "name": "GLSL"
+        }
+      },
+      {
+        "size": 754823,
+        "node": {
+          "name": "C"
+        }
+      },
+      {
+        "size": 16420,
+        "node": {
+          "name": "Objective-C"
+        }
+      },
+      {
+        "size": 2668,
+        "node": {
+          "name": "CMake"
+        }
+      }
+    ],
+    "name": "Simple-OpenGL-app-base",
+    "url": "https://github.com/Kamilek7/Simple-OpenGL-app-base",
+    "images": "https://github.com/user-attachments/assets/c11bd198-8a32-4ea4-ad7c-b719346801bb"
+  },
+  {
+    "createdAt": "2024-04-08T11:24:48Z",
+    "description": "python project for our first year of cs",
+    "languages": [
+      {
+        "size": 83411,
+        "node": {
+          "name": "Python"
+        }
+      }
+    ],
+    "name": "Python-Platformer",
+    "url": "https://github.com/Kamilek7/Python-Platformer",
+    "images": "https://github.com/user-attachments/assets/e6b2b480-de1e-440b-9a3e-9dcdd11cda13\nhttps://github.com/user-attachments/assets/035a3fc6-4b91-4284-a849-b420c6793d1e\nhttps://github.com/user-attachments/assets/4ec02754-47c9-4965-a23e-c7f9f3353ae7"
+  },
+  {
+    "createdAt": "2025-02-11T10:14:14Z",
+    "description": "",
+    "languages": [
+      {
+        "size": 33439,
+        "node": {
+          "name": "PHP"
+        }
+      },
+      {
+        "size": 9281,
+        "node": {
+          "name": "CSS"
+        }
+      }
+    ],
+    "name": "rogalPages",
+    "url": "https://github.com/Kamilek7/rogalPages",
+    "images": "https://github.com/user-attachments/assets/588c266d-43a3-49c1-8e1e-c8b17cfaa400\nhttps://github.com/user-attachments/assets/417c7b1c-d03d-40e8-83f0-bed09c1c3082\nhttps://github.com/user-attachments/assets/ff537a0d-37a7-4d93-8db6-7032aeb3369e"
+  },
+  {
+    "createdAt": "2024-06-20T11:43:54Z",
+    "description": "",
+    "languages": [
+      {
+        "size": 1897,
+        "node": {
+          "name": "HTML"
+        }
+      },
+      {
+        "size": 3664,
+        "node": {
+          "name": "CSS"
+        }
+      },
+      {
+        "size": 15357,
+        "node": {
+          "name": "JavaScript"
+        }
+      }
+    ],
+    "name": "Color-Palette-Generator",
+    "url": "https://github.com/Kamilek7/Color-Palette-Generator",
+    "images": "https://github.com/user-attachments/assets/c8dee6c2-e6dc-4422-a072-d76fba7f18be\nhttps://github.com/user-attachments/assets/d17714c2-7162-4ca9-8866-47173be9d4c0"
+  },
+  {
+    "createdAt": "2025-06-29T21:42:56Z",
+    "description": "",
+    "languages": [
+      {
+        "size": 12277,
+        "node": {
+          "name": "Python"
+        }
+      },
+      {
+        "size": 32094,
+        "node": {
+          "name": "JavaScript"
+        }
+      },
+      {
+        "size": 366,
+        "node": {
+          "name": "HTML"
+        }
+      },
+      {
+        "size": 11051,
+        "node": {
+          "name": "CSS"
+        }
+      },
+      {
+        "size": 287,
+        "node": {
+          "name": "Shell"
+        }
+      }
+    ],
+    "name": "rogalTasks",
+    "url": "https://github.com/Kamilek7/rogalTasks",
+    "images": "https://github.com/user-attachments/assets/cb6a7e0f-f6d4-4df8-8bca-7fa99d7abaf0\nhttps://github.com/user-attachments/assets/65bc2d46-1521-4d3b-9fef-66289d784739"
+  }
+]
