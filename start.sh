@@ -1,6 +1,4 @@
 #!/bin/bash
-git stash
-git pull --rebase
 cd template
 touch loadedSettings.json
 gh repo list --visibility "public" --json name | jq -c '.[]' | while read -r repo; do 
@@ -13,5 +11,6 @@ python3 mainCode/main.py
 python3 mainCode/fromOutputToMainSite.py
 cd "$(jq -r .pagePath config.json)"
 git pull --rebase
+git add -A
 git commit -a -m "automatic response from Rogal"
 git push

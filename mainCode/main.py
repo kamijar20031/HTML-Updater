@@ -40,7 +40,7 @@ memConf = ""
 with open(os.path.join(OUTPUT_DIR, MEM_CONFIG)) as json_data:
     memConf = json_data.read()
 
-if data!=memory and conf!=memConf:
+if data!=memory or conf!=memConf:
     with open(os.path.join(OUTPUT_DIR, MEM_FILE), 'w') as output:
         output.write(data)
     with open(os.path.join(OUTPUT_DIR, MEM_CONFIG), 'w') as output:

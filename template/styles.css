@@ -5,8 +5,8 @@
 
     user-select: none;
 
-    --mainOrng: light-dark(rgba(252, 176, 69, 1), rgba(131, 85, 20, 1));
-    --mainPrpl: light-dark(rgba(154, 31, 181, 1), rgba(85, 11, 102, 1));
+    --mainOrng: rgba(252, 176, 69, 1);
+    --mainPrpl: rgba(154, 31, 181, 1);
     --mainGreen: rgb(48, 181, 31);
     --auxGreen: rgba(66, 141, 111, 0.379);
 
@@ -53,6 +53,7 @@ body
     background-color: rgb(56, 56, 30);
     font-family: 'Smooch Sans';
 }
+
 #bg1
 {
     position:absolute;
@@ -74,7 +75,7 @@ body
 {
     padding: 2rem;
     margin-inline: auto;
-    margin-top: 30vh;
+    margin-top:25vh;
     width:60vw;
     background-color: var(--modalBG);
     border-radius: 2rem;
@@ -367,17 +368,28 @@ body
     display:flex;
     justify-content: center;
     align-items: center;
+    
 }
-
 .mainBoxes
 {
     position: absolute;
     width: 40vw;
     height: 15vw;
-   
+
 }
+@media (orientation: portrait) {
+    .mainBoxes
+    {
+        width: 80vw;
+        height: 70vh;
+    }
+}
+
 #rightText
 {
+    border-radius: 1.5vh;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
     height:100%;
     display: flex;
     align-items: center;
@@ -386,13 +398,9 @@ body
     left: var(--cardRight);
     top: var(--cardTop);
     text-align: justify;
-    padding: 0 3vw;
-    font-size: 1.3vw;
-    background-color: #161616;
-    border-radius: 0.5vw;
+    padding: 0 5vh;
+    font-size: 3vh;
     z-index: 0;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
     background: var(--patternDark1);
     background-size: var(--s) calc(var(--s)*tan(30deg));
     
@@ -400,6 +408,9 @@ body
 }
 #hello
 {
+    border-radius: 1.5vh;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
     z-index: 1;
     height:100%;
     display: flex;
@@ -408,11 +419,8 @@ body
     position: relative;
     left: var(--cardLeft);
     text-align: center;
-    padding: 0 5vw;
-    font-size:  4vw;
-    border-radius: 0.5vw;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
+    padding: 0 5vh;
+    font-size:  8vh;
     background: var(--patternLight1);
     background-size: var(--s) calc(var(--s)*tan(30deg));
 }
@@ -484,17 +492,6 @@ a
     z-index: -2;
     animation-name: animation-gradient-1;
   }
-  .gradient-2 {
-    background: rgb(94, 92, 100);
-    width: 600px;
-    height: 600px;
-    animation-duration: 11s;
-    opacity: 0.6;
-    left: 40%;
-    top: 60%;
-    z-index: -1;
-    animation-name: animation-gradient-2;
-  }
   .gradient-3 {
     background: var(--mainPrpl);
     width: 500px;
@@ -527,25 +524,6 @@ a
         }
       }
       
-      @keyframes animation-gradient-2 {
-        0% {
-          transform: translateY(-50%) translateX(-50%) rotate(40deg) translateX(-20%);
-        }
-        25% {
-          transform: translateY(-50%) translateX(-50%) skew(15deg, 15deg)
-            rotate(110deg) translateX(-5%);
-        }
-        50% {
-          transform: translateY(-50%) translateX(-50%) rotate(210deg) translateX(-35%);
-        }
-        75% {
-          transform: translateY(-50%) translateX(-50%) skew(-15deg, -15deg)
-            rotate(300deg) translateX(-10%);
-        }
-        100% {
-          transform: translateY(-50%) translateX(-50%) rotate(400deg) translateX(-20%);
-        }
-      }
       
       @keyframes animation-gradient-3 {
         0% {
