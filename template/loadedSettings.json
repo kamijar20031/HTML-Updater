@@ -1,43 +1,145 @@
 [
   {
     "createdAt": "2024-05-18T12:58:49Z",
-    "description": "",
+    "description": "Strona ukazująca moje portfolio, generowana przez HTML-Updater",
+    "homepageUrl": "https://kamijar20031.github.io/",
     "languages": [
       {
-        "size": 17214,
+        "size": 14327,
         "node": {
           "name": "CSS"
         }
       },
       {
-        "size": 5420,
+        "size": 10135,
         "node": {
           "name": "HTML"
         }
       },
       {
-        "size": 3725,
+        "size": 3656,
         "node": {
           "name": "JavaScript"
         }
       }
     ],
-    "name": "Kamilek7.github.io",
-    "url": "https://github.com/Kamilek7/Kamilek7.github.io",
+    "name": "KamiJar20031.github.io",
+    "url": "https://github.com/kamijar20031/KamiJar20031.github.io",
     "images": ""
   },
   {
-    "createdAt": "2025-06-29T21:42:56Z",
-    "description": "",
+    "createdAt": "2025-10-17T19:02:56Z",
+    "description": "Podstawowy silnik fizyczny razem z wizualizacją w OpenGL",
+    "homepageUrl": "",
     "languages": [
       {
-        "size": 12886,
+        "size": 2450,
+        "node": {
+          "name": "CMake"
+        }
+      },
+      {
+        "size": 69895,
+        "node": {
+          "name": "C++"
+        }
+      },
+      {
+        "size": 2033,
+        "node": {
+          "name": "GLSL"
+        }
+      }
+    ],
+    "name": "OpenGL-Linux",
+    "url": "https://github.com/kamijar20031/OpenGL-Linux",
+    "images": "https://github.com/user-attachments/assets/bab9c0fc-b65a-4a08-a290-a4e2c0e95f7d"
+  },
+  {
+    "createdAt": "2025-12-20T12:18:34Z",
+    "description": "Strona pokazująca czy zbliża się niedziela handlowa",
+    "homepageUrl": "https://kamijar20031.github.io/Niedziele-Handlowe/",
+    "languages": [
+      {
+        "size": 712,
+        "node": {
+          "name": "HTML"
+        }
+      },
+      {
+        "size": 3778,
+        "node": {
+          "name": "CSS"
+        }
+      },
+      {
+        "size": 2114,
+        "node": {
+          "name": "JavaScript"
+        }
+      },
+      {
+        "size": 1753,
+        "node": {
+          "name": "Python"
+        }
+      }
+    ],
+    "name": "Niedziele-Handlowe",
+    "url": "https://github.com/kamijar20031/Niedziele-Handlowe",
+    "images": "https://github.com/user-attachments/assets/025a4b3d-b745-4423-acd5-544dbe7c4f69"
+  },
+  {
+    "createdAt": "2026-03-09T20:10:23Z",
+    "description": "",
+    "homepageUrl": "",
+    "languages": [
+      {
+        "size": 49570,
+        "node": {
+          "name": "Kotlin"
+        }
+      }
+    ],
+    "name": "TasksApp-Port",
+    "url": "https://github.com/kamijar20031/TasksApp-Port",
+    "images": ""
+  },
+  {
+    "createdAt": "2024-06-20T11:38:35Z",
+    "description": "Projekt z pierwszego roku ISSP - gra 2D bazująca na Touhou",
+    "homepageUrl": "",
+    "languages": [
+      {
+        "size": 60312,
+        "node": {
+          "name": "C++"
+        }
+      },
+      {
+        "size": 1051,
+        "node": {
+          "name": "CMake"
+        }
+      }
+    ],
+    "name": "Danmaku-game-base",
+    "url": "https://github.com/kamijar20031/Danmaku-game-base",
+    "images": "https://github.com/user-attachments/assets/75e8d891-ae9f-47fe-83e9-c4aa98b06819\nhttps://github.com/user-attachments/assets/233e550e-072a-432a-a9af-853716269cbf"
+  },
+  {
+    "createdAt": "2025-06-29T21:42:56Z",
+    "description": "Aplikacja webowa działająca jako typowy task manager z harmonogramem i Discordowymi powiadomieniami",
+    "homepageUrl": "https://tasks.rogalrogalrogalrogal.online/",
+    "languages": [
+      {
+        "size": 13400,
         "node": {
           "name": "Python"
         }
       },
       {
-        "size": 33300,
+        "size": 32168,
         "node": {
           "name": "JavaScript"
         }
@@ -49,133 +151,26 @@
         }
       },
       {
-        "size": 10801,
+        "size": 10863,
         "node": {
           "name": "CSS"
         }
       },
       {
-        "size": 701,
+        "size": 728,
         "node": {
           "name": "Shell"
         }
       }
     ],
     "name": "rogalTasks",
-    "url": "https://github.com/Kamilek7/rogalTasks",
+    "url": "https://github.com/kamijar20031/rogalTasks",
     "images": "https://github.com/user-attachments/assets/cb6a7e0f-f6d4-4df8-8bca-7fa99d7abaf0\nhttps://github.com/user-attachments/assets/65bc2d46-1521-4d3b-9fef-66289d784739"
   },
   {
-    "createdAt": "2025-09-02T14:21:10Z",
-    "description": "",
-    "languages": [
-      {
-        "size": 18985,
-        "node": {
-          "name": "HTML"
-        }
-      }
-    ],
-    "name": "BootlegSnake",
-    "url": "https://github.com/Kamilek7/BootlegSnake",
-    "images": "https://github.com/user-attachments/assets/3b1db29a-31e9-4daa-bb3e-e9a502ea1933\nhttps://github.com/user-attachments/assets/c0762bcf-dd40-43e5-a41a-4981f4fdafce"
-  },
-  {
-    "createdAt": "2025-07-28T13:35:00Z",
-    "description": "",
-    "languages": [
-      {
-        "size": 9710,
-        "node": {
-          "name": "Python"
-        }
-      },
-      {
-        "size": 12229,
-        "node": {
-          "name": "CSS"
-        }
-      },
-      {
-        "size": 23700,
-        "node": {
-          "name": "JavaScript"
-        }
-      },
-      {
-        "size": 415,
-        "node": {
-          "name": "HTML"
-        }
-      },
-      {
-        "size": 174,
-        "node": {
-          "name": "Shell"
-        }
-      }
-    ],
-    "name": "rogalLibrarby",
-    "url": "https://github.com/Kamilek7/rogalLibrarby",
-    "images": "https://github.com/user-attachments/assets/45011ab3-df9f-4dc7-afec-404da7eef9f0\nhttps://github.com/user-attachments/assets/2385afa5-7c04-4953-b137-8d03254f76ae"
-  },
-  {
-    "createdAt": "2023-12-14T11:40:12Z",
-    "description": "",
-    "languages": [
-      {
-        "size": 2553,
-        "node": {
-          "name": "HTML"
-        }
-      },
-      {
-        "size": 15357,
-        "node": {
-          "name": "CSS"
-        }
-      },
-      {
-        "size": 3157,
-        "node": {
-          "name": "JavaScript"
-        }
-      },
-      {
-        "size": 5703,
-        "node": {
-          "name": "Python"
-        }
-      },
-      {
-        "size": 641,
-        "node": {
-          "name": "Shell"
-        }
-      }
-    ],
-    "name": "HTML-Updater",
-    "url": "https://github.com/Kamilek7/HTML-Updater",
-    "images": "https://github.com/user-attachments/assets/2c22e355-0624-4c74-98ce-cf126f575dc9"
-  },
-  {
-    "createdAt": "2024-06-20T11:38:35Z",
-    "description": "cpp project from first year of cs - \"inspired\" by touhou ofc",
-    "languages": [
-      {
-        "size": 59486,
-        "node": {
-          "name": "C++"
-        }
-      }
-    ],
-    "name": "Danmaku-game-base",
-    "url": "https://github.com/Kamilek7/Danmaku-game-base",
-    "images": "https://github.com/user-attachments/assets/75e8d891-ae9f-47fe-83e9-c4aa98b06819\nhttps://github.com/user-attachments/assets/233e550e-072a-432a-a9af-853716269cbf"
-  },
-  {
     "createdAt": "2024-10-14T11:55:58Z",
-    "description": "",
+    "description": "Gra z drugiego roku ISSP będąca projektem końcowym Projektu C+. Grafika została obsłużona bezpośrednio przez OpenGL",
+    "homepageUrl": "",
     "languages": [
       {
         "size": 7230956,
@@ -208,52 +203,110 @@
         }
       }
     ],
-    "name": "CPP-Projekt",
-    "url": "https://github.com/Kamilek7/CPP-Projekt",
+    "name": "Backrooms-Crawler-Game",
+    "url": "https://github.com/kamijar20031/Backrooms-Crawler-Game",
     "images": "https://github.com/user-attachments/assets/31208df2-5071-4876-addc-074ef59ab638\nhttps://github.com/user-attachments/assets/cfc3b6fd-eb92-4e9d-b98d-ff9a7b5d6e8f"
   },
   {
-    "createdAt": "2024-08-15T17:39:52Z",
-    "description": "",
+    "createdAt": "2025-07-28T13:35:00Z",
+    "description": "Strona mająca usprawniać śledzenie przeczytanych książek. Jak na razie w mocnej budowie",
+    "homepageUrl": "https://librarby.rogalrogalrogalrogal.online/",
     "languages": [
       {
-        "size": 3840603,
+        "size": 10703,
         "node": {
-          "name": "C++"
+          "name": "Python"
         }
       },
       {
-        "size": 2876,
+        "size": 12407,
         "node": {
-          "name": "GLSL"
+          "name": "CSS"
         }
       },
       {
-        "size": 754823,
+        "size": 26335,
         "node": {
-          "name": "C"
+          "name": "JavaScript"
         }
       },
       {
-        "size": 16420,
+        "size": 415,
         "node": {
-          "name": "Objective-C"
+          "name": "HTML"
         }
       },
       {
-        "size": 2668,
+        "size": 465,
         "node": {
-          "name": "CMake"
+          "name": "Shell"
         }
       }
     ],
-    "name": "Simple-OpenGL-app-base",
-    "url": "https://github.com/Kamilek7/Simple-OpenGL-app-base",
-    "images": "https://github.com/user-attachments/assets/c11bd198-8a32-4ea4-ad7c-b719346801bb"
+    "name": "rogalLibrarby",
+    "url": "https://github.com/kamijar20031/rogalLibrarby",
+    "images": "https://github.com/user-attachments/assets/45011ab3-df9f-4dc7-afec-404da7eef9f0\nhttps://github.com/user-attachments/assets/2385afa5-7c04-4953-b137-8d03254f76ae"
+  },
+  {
+    "createdAt": "2023-12-14T11:40:12Z",
+    "description": "Projekt pozwalający na automatyczne aktualizowanie strony odpowiadajacej za moje portfolio",
+    "homepageUrl": "",
+    "languages": [
+      {
+        "size": 2610,
+        "node": {
+          "name": "HTML"
+        }
+      },
+      {
+        "size": 14468,
+        "node": {
+          "name": "CSS"
+        }
+      },
+      {
+        "size": 3157,
+        "node": {
+          "name": "JavaScript"
+        }
+      },
+      {
+        "size": 5703,
+        "node": {
+          "name": "Python"
+        }
+      },
+      {
+        "size": 625,
+        "node": {
+          "name": "Shell"
+        }
+      }
+    ],
+    "name": "HTML-Updater",
+    "url": "https://github.com/kamijar20031/HTML-Updater",
+    "images": "https://github.com/user-attachments/assets/2c22e355-0624-4c74-98ce-cf126f575dc9"
+  },
+  {
+    "createdAt": "2025-09-02T14:21:10Z",
+    "description": "Gra z pierwszego roku ISSP, będąca projektem zaliczeniowym na Projektowanie Aplikacji Internetowych",
+    "homepageUrl": "https://kamijar20031.github.io/BootlegSnake/",
+    "languages": [
+      {
+        "size": 18985,
+        "node": {
+          "name": "HTML"
+        }
+      }
+    ],
+    "name": "BootlegSnake",
+    "url": "https://github.com/kamijar20031/BootlegSnake",
+    "images": "https://github.com/user-attachments/assets/3b1db29a-31e9-4daa-bb3e-e9a502ea1933\nhttps://github.com/user-attachments/assets/c0762bcf-dd40-43e5-a41a-4981f4fdafce"
   },
   {
     "createdAt": "2024-04-08T11:24:48Z",
-    "description": "python project for our first year of cs",
+    "description": "Projekt zaliczeniowy na pierwszym roku studiów - platformówka z edytorem map",
+    "homepageUrl": "",
     "languages": [
       {
         "size": 83411,
@@ -263,12 +316,13 @@
       }
     ],
     "name": "Python-Platformer",
-    "url": "https://github.com/Kamilek7/Python-Platformer",
+    "url": "https://github.com/kamijar20031/Python-Platformer",
     "images": "https://github.com/user-attachments/assets/e6b2b480-de1e-440b-9a3e-9dcdd11cda13\nhttps://github.com/user-attachments/assets/035a3fc6-4b91-4284-a849-b420c6793d1e\nhttps://github.com/user-attachments/assets/4ec02754-47c9-4965-a23e-c7f9f3353ae7"
   },
   {
     "createdAt": "2025-02-11T10:14:14Z",
-    "description": "",
+    "description": "Prosty projekt zaliczeniowy wykonany w PHP mający funkcję forum.",
+    "homepageUrl": "https://rogalrogalrogalrogal.online/",
     "languages": [
       {
         "size": 33439,
@@ -284,12 +338,13 @@
       }
     ],
     "name": "rogalPages",
-    "url": "https://github.com/Kamilek7/rogalPages",
+    "url": "https://github.com/kamijar20031/rogalPages",
     "images": "https://github.com/user-attachments/assets/588c266d-43a3-49c1-8e1e-c8b17cfaa400\nhttps://github.com/user-attachments/assets/417c7b1c-d03d-40e8-83f0-bed09c1c3082\nhttps://github.com/user-attachments/assets/ff537a0d-37a7-4d93-8db6-7032aeb3369e"
   },
   {
     "createdAt": "2024-06-20T11:43:54Z",
-    "description": "",
+    "description": "Aplikacja pozwalajaca dobrać palety kolorów w różnych zestawach",
+    "homepageUrl": "https://kamijar20031.github.io/Color-Palette-Generator/",
     "languages": [
       {
         "size": 1897,
@@ -311,7 +366,7 @@
       }
     ],
     "name": "Color-Palette-Generator",
-    "url": "https://github.com/Kamilek7/Color-Palette-Generator",
+    "url": "https://github.com/kamijar20031/Color-Palette-Generator",
     "images": "https://github.com/user-attachments/assets/c8dee6c2-e6dc-4422-a072-d76fba7f18be\nhttps://github.com/user-attachments/assets/d17714c2-7162-4ca9-8866-47173be9d4c0"
   }
 ]

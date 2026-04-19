@@ -22,7 +22,7 @@ class Project:
         self.id = id
         self.description = description
     def getCode(self):
-        return f"<div class='project'><img id='images_{self.id}' onclick='changeIMG({self.id})' src='{self.images[0]}'><div class='projectTitle'><a href='{self.url}' target='_blank'>{self.name}</a><p>{" ".join(self.langs)}</p>{self.description}<p></p></div></div>\n"
+        return f"<div class='project'><div class='images'><img id='images_{self.id}Top' onclick='changeIMG({self.id})' src='{self.images[1]}'><img id='images_{self.id}Bottom' class='bottom' onclick='changeIMG({self.id})' src='{self.images[0]}'></div><div class='projectTitle'>{self.name}<p>{" ".join(self.langs)}</p><a href='{self.url}' target='_blank'>{self.description}</a></div></div>\n"
 
 data = ""
 with open(os.path.join(TEMPLATE_DIR, SETTINGS_FILE)) as json_data:
@@ -72,21 +72,24 @@ if data!=memory or conf!=memConf:
             divs.append(TimeRow(crntDate))
         if repo["images"] != "":
             repo["images"] = repo["images"].split("\n")
-            imgs = []
             for i in range(len(repo["images"])):
                 repo["images"][i] = downloadImgLocally(repo["images"][i])
+            if len(repo["images"])==1:
+                repo["images"].append(repo["images"][0])
             inside = f"{repo["images"]}"
             javascript += "{srcs:" + inside + ", idx:0},\n"
             
         else:
-            javascript += "{srcs: [], idx:0},\n"
-            repo["images"] = ["none"]
+            javascript += "{srcs: ['none.png'], idx:0},\n"
+            repo["images"] = ["none.png", "none.png"]
         repo["name"] = repo["name"].replace("-", " ")
         numLang = len(repo["languages"])
         if not isinstance(repo["languages"][0], str):
             repo["languages"] = [lang["node"]["name"] for lang in repo["languages"]]
         if numLang>3:
             repo["languages"] = repo["languages"][:3]
+        if repo["homepageUrl"]!="":
+            repo["url"] = repo["homepageUrl"]
         divs.append(Project(repo["name"], repo["languages"], repo["images"], repo["url"], id, repo["description"]))
         id+=1
     javascript+="];\n"

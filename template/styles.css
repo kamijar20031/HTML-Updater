@@ -11,7 +11,7 @@
     --auxGreen: rgba(66, 141, 111, 0.379);
 
     --gradientBG: light-dark(#aabd9e, #181b17);
-    --modalBG:  light-dark( rgba(255,255,255,0.6), rgba(40,40,40,0.6));
+    --modalBG:  light-dark( rgba(255,255,255,0.4), rgba(40,40,40,0.6));
 
     --fontColor: light-dark(#161616, #bbbbbb);
 
@@ -31,11 +31,6 @@
         calc(var(--patternScale)/2) calc(var(--patternScale)*tan(30deg)/2),
         repeating-conic-gradient(from 30deg,var(--patternLight1) 0 60deg,var(--patternLight2) 0 120deg,var(--patternLight3) 0 50%);
 
-    --cardLeft: -5vw;
-    --cardRight: 5vw;
-    --cardTop: -2.5vw;
-    --cardUp: -10vw;
-
     --rootWidth: 1vw;
 
     --projectWidth: calc(12rem + 8vw );
@@ -49,7 +44,12 @@
 
 body
 {
+    position: fixed;
     margin:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    overscroll-behavior: none;
     background-color: rgb(56, 56, 30);
     font-family: 'Smooch Sans';
 }
@@ -59,7 +59,6 @@ body
     position:absolute;
     top:0;
     left:0;
-    filter: blur(5rem);
     height:100vh;
     width:100vw;
     animation: animateBG1;
@@ -71,24 +70,40 @@ body
     z-index: -1;
 }
 
-#welcome
+#sidePage
 {
-    padding: 2rem;
+    position:absolute;
+    top:5vh;
+    left: 100vw;
+    width:95vw;
+    background-color: #303030c9;
+    transition: all 1s ease-in-out;
+    border-radius: 2rem;
+    backdrop-filter: blur(1rem);
+    padding:2rem;
+    box-sizing: border-box;
+    
+}
+
+#welcome 
+{
+    padding: 4rem 0;
     margin-inline: auto;
     margin-top:25vh;
-    width:60vw;
+    width:100%;
     background-color: var(--modalBG);
-    border-radius: 2rem;
-    box-shadow: 5px 10px 40px 10px rgba(40, 40, 40, 0.279);
-
+    box-shadow: 0px 10px 16px 10px rgba(40, 40, 40, 0.279);
+    overflow: hidden;
 }
+
 #welcome > img
 {
     border-radius: 1vw;
     margin:auto;
     display:block;
 }
-#welcomeHead
+
+.welcomeHead
 {
     filter: brightness(0.9);
     text-align: center;
@@ -100,14 +115,19 @@ body
     animation-iteration-count: infinite;
     color:transparent;
     background-clip:text;
-    font-size: 3rem;
+    font-size: 3.3rem;
     font-family: 'Climate Crisis';
+    transition: height 0.6s ease-in-out;
+    
 }
+
 #welcomeText
 {
     color: var(--fontColor);
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    width: 60%;
+    margin:auto;
 }
 #arrow
 {
@@ -128,7 +148,7 @@ body
 #arrowBG
 {
     margin-inline:auto;
-    margin-top:2vw;
+    margin-top:3vh;
     width: fit-content;
     padding: 0.4rem 2.5rem;
     background-color: var(--modalBG);
@@ -148,6 +168,33 @@ body
     box-shadow: 0px 2px 7px 3px var(--auxGreen);
     transform: scale(1);
 }
+
+#textWrapper
+{
+    padding: 1rem;
+    width:80%;
+    margin:auto;
+    max-height: 70vh;
+    overflow: scroll;
+}
+.columnText
+{
+    text-align: justify;
+    font-size: 1.4rem;
+}
+#zdjecie
+{
+    box-sizing: border-box;
+    margin:auto;
+    display: flex;
+    align-items: center;
+}
+#zdjecie img
+{
+    margin:auto;
+    width:80%;
+    border-radius: 1rem;
+}
 #page2
 {
     position:fixed;
@@ -162,9 +209,6 @@ body
     transform: rotate(0.3deg);
     /* specjalne tlo */
     --s: 108px;
-    /* --c1: #151515;
-    --c2: #161616;
-    --c3: #151515; */
     --_g: 
         var(--patternDark2) 6%  14%,var(--patternDark1) 16% 24%,var(--patternDark2) 26% 34%,var(--patternDark1) 36% 44%,
         var(--patternDark2) 46% 54%,var(--patternDark1) 56% 64%,var(--patternDark2) 66% 74%,var(--patternDark1) 76% 84%,var(--patternDark2) 86% 94%;
@@ -226,7 +270,8 @@ body
 
 .projectTitle
 {
-    padding-top:0.5vw;
+    padding: 1rem;
+    box-sizing: border-box;
     position:relative;
     bottom:calc(var(--projectHeight)/4.0);
     left:0;
@@ -253,20 +298,29 @@ body
     height:var(--projectHeight);
     bottom:var(--projectHeight);
 }
-.project > img
+.images > img
 {
     position:relative;
-    top:0;
     margin:0;
     width:100%;
     height:100%;
     object-fit: cover;
-    transition: ease-in-out all 0.3s;
+    transition: linear all 0.3s;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
     
 }
-.project > img:hover
+.images
+{
+    transition: ease-in-out all 0.3s;
+    height:100%;
+    width:100%
+}
+.bottom
+{
+    top:-102%;
+}
+.images:hover
 {
     cursor: pointer;
     transform: scale(1.1);
@@ -311,14 +365,49 @@ body
         left: calc( var(--rootWidth) + var(--projectGap));
         
     }
-
+    #textWrapper
+    {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        box-sizing: border-box;
+        width:70%;
+        
+    }
+    .columnText
+    {
+        font-size: 1.6rem;
+    }
+    #zdjecie
+    {
+        border-left: 1px solid white;
+    }
+    #zdjecie img
+    {
+        margin:1rem;
+        margin-left: 2rem;
+    }
 }
 @media only screen and (orientation: portrait)
 {
+    :root
+    {
+        --projectWidth: calc(12rem + 9vw );
+        --projectHeight: calc(9rem + 7vw );
+    }
+    #textWrapper
+    {
+        height:50vh;
+        overflow: scroll;
+    }
+    .columnText
+    {
+        margin-bottom: 1.5rem;
+    }
     #projectContainer
     {
-
-        width:70vw;
+        padding-block:1rem;
+        width:73vw;
     }
     #projectRoot .project
     {
@@ -327,7 +416,7 @@ body
     }
     .yearRow > *
     {
-        width:60%;
+        width:70%;
     }
     .yearRow *:nth-child(2n)
     {
@@ -346,6 +435,66 @@ body
     }
 }
 
+#contactHead
+{
+    position:fixed;
+    margin-left: 63vw;
+    width:fit-content;
+    font-size: calc(9vh + 1.5vw);
+    color:#151515;
+}
+#contactMore
+{
+    text-align: justify;
+    margin-top: calc(13vh + 3vw);
+    position:fixed;
+    width: calc(48vh + 8vw);
+    margin-left: 54vw;
+    font-size: calc(3vh + 0.5vw);
+    color:#151515;
+}
+.padInside
+{
+    margin-top: 5.0vmin;
+    border-top: 1vmin dashed rgb(203, 207, 203);
+}
+
+#card1
+{
+    z-index: 1;
+    transform: rotate(5deg);
+    position:fixed;
+    top:60vh;
+    left:-50vw;
+    height:100vw;
+    width:400vw;
+    --s: 93px;
+    --c1: rgb(170, 160, 22);
+    --c2: rgb(168, 158, 20);
+    background: linear-gradient(atan(-.5), var(--c1) 33%, var(--c2) 33.5% 66.5%, var(--c1) 67%) 0/var(--s) var(--s);
+    transition: all 0.3s ease-in-out;
+}
+#card1:hover
+{
+    top:35vh;
+    left:-47vw;
+}   
+#card2
+{
+    z-index: 2;
+    transform: rotate(-15deg);
+    position:fixed;
+    top:-50vh;
+    left:0vw;
+    height:200vh;
+    width:1000vh;
+    box-shadow: 0px -10px 30px 10px rgba(0, 0, 0, 0.279);
+    --s: 93px;
+    --c1: rgb(138, 10, 10);
+    --c2: rgb(136, 8, 8);
+    background: linear-gradient(atan(-.5), var(--c1) 33%, var(--c2) 33.5% 66.5%, var(--c1) 67%) 0/var(--s) var(--s);
+}
+
 #page3
 {
     transform: rotate(-0.3deg);
@@ -356,27 +505,14 @@ body
     height:100vh;
     animation-duration: 0.6s;
     animation-fill-mode: forwards;
-    background-color: var(--gradientBG);
     overflow: hidden;
+    --s: 93px;
+    --c1: rgb(39, 37, 35);
+    --c2:rgb(37, 35, 33);
+    background: linear-gradient(atan(.5), var(--c1) 33%, var(--c2) 33.5% 66.5%, var(--c1) 67%) 0/var(--s) var(--s);
 }
 
-#contact
-{
-    margin-top:10vh;
-    width:100%;
-    height:70%;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-.mainBoxes
-{
-    position: absolute;
-    width: 40vw;
-    height: 15vw;
 
-}
 @media (orientation: portrait) {
     .mainBoxes
     {
@@ -385,55 +521,6 @@ body
     }
 }
 
-#rightText
-{
-    border-radius: 1.5vh;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    height:100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    left: var(--cardRight);
-    top: var(--cardTop);
-    text-align: justify;
-    padding: 0 5vh;
-    font-size: 3vh;
-    z-index: 0;
-    background: var(--patternDark1);
-    background-size: var(--s) calc(var(--s)*tan(30deg));
-    
-    
-}
-#hello
-{
-    border-radius: 1.5vh;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    z-index: 1;
-    height:100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    left: var(--cardLeft);
-    text-align: center;
-    padding: 0 5vh;
-    font-size:  8vh;
-    background: var(--patternLight1);
-    background-size: var(--s) calc(var(--s)*tan(30deg));
-}
-
-#placeholder
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width:50%;
-    height:50%;
-    position: absolute;
-}
 
 a
 {
@@ -456,101 +543,6 @@ a
     transform: scale(1.05);
     box-shadow: 0px 2px 10px 1px var(--auxGreen);
 }
-
-  /* Kod pobrany z CSS Plasma Background Generator
-  https://github.com/fracergu/css-plasma-background-generator */
-
-      .wrapper {
-        z-index:-1;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        filter: blur(150px);
-      }
-
-      .gradient {
-        position: absolute;
-        border-radius: 100%;
-        opacity: 0.6;
-        mix-blend-mode: screen;
-        animation-iteration-count: infinite;
-        animation-timing-function: cubic-bezier(0.1, 0, 0.9, 1);
-      }
-
-      
-  .gradient-1 {
-    background: var(--mainOrng);
-    width: 700px;
-    height: 700px;
-    animation-duration: 11s;
-    opacity: 0.6;
-    left: 60%;
-    top: 40%;
-    z-index: -2;
-    animation-name: animation-gradient-1;
-  }
-  .gradient-3 {
-    background: var(--mainPrpl);
-    width: 500px;
-    height: 500px;
-    animation-duration: 11s;
-    opacity: 0.6;
-    left: 50%;
-    top: 50%;
-    z-index: -3;
-    animation-name: animation-gradient-3;
-  }
-
-      @keyframes animation-gradient-1 {
-        0% {
-          transform: translateY(-50%) translateX(-50%) rotate(-20deg) translateX(20%);
-        }
-        25% {
-          transform: translateY(-50%) translateX(-50%) skew(-15deg, -15deg)
-            rotate(80deg) translateX(30%);
-        }
-        50% {
-          transform: translateY(-50%) translateX(-50%) rotate(180deg) translateX(25%);
-        }
-        75% {
-          transform: translateY(-50%) translateX(-50%) skew(15deg, 15deg)
-            rotate(240deg) translateX(15%);
-        }
-        100% {
-          transform: translateY(-50%) translateX(-50%) rotate(340deg) translateX(20%);
-        }
-      }
-      
-      
-      @keyframes animation-gradient-3 {
-        0% {
-          transform: translateY(-50%) translateX(-50%) translateX(-15%)
-            translateY(10%);
-        }
-        20% {
-          transform: translateY(-50%) translateX(-50%) translateX(20%)
-            translateY(-30%);
-        }
-        40% {
-          transform: translateY(-50%) translateX(-50%) translateX(-25%)
-            translateY(-15%);
-        }
-        60% {
-          transform: translateY(-50%) translateX(-50%) translateX(30%) translateY(20%);
-        }
-        80% {
-          transform: translateY(-50%) translateX(-50%) translateX(5%) translateY(35%);
-        }
-        100% {
-          transform: translateY(-50%) translateX(-50%) translateX(-15%)
-            translateY(10%);
-        }
-      }
-
-
 
 @keyframes animateBG1
 {
@@ -590,6 +582,7 @@ a
     }
 } 
 
+
 @keyframes projectIn
 {
     0%
@@ -606,56 +599,6 @@ a
     }
 }
 
-@keyframes cardToFront 
-{
-    0% 
-    {
-        z-index: 0;
-        top: var(--cardTop);
-        left: var(--cardRight);
-        background: var(--patternDark1);
-    }
-    50%
-    {
-        z-index: 1;
-        top: var(--cardUp);
-        left: var(--cardRight);
-        background: var(--patternLight1);
-    }
-    100%
-    {
-        top: 0vw;
-        background: var(--patternLight1);
-        z-index: 1;
-        left: var(--cardLeft);
-    }
-}
-
-@keyframes cardToBack 
-{
-    0% 
-    {
-        left: var(--cardLeft);
-        top: 0vw;
-        background: var(--patternLight1);
-        z-index: 1;
-    }
-    50%
-    {
-        left: var(--cardLeft);
-        top: 0vw;
-        background: var(--patternDark1);
-        z-index: 0;
-    }
-    100%
-    {
-        top: var(--cardTop);
-        left: var(--cardRight);
-        background: var(--patternDark1);
-        z-index: 0;
-
-    }
-}
 
 @keyframes imgChangeIn
 {

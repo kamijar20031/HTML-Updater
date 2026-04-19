@@ -1,11 +1,8 @@
+const sidePage = document.getElementById("sidePage")
 const pages = [document.getElementById("page1"),document.getElementById("page2"), document.getElementById("page3")];
 const numPages = pages.length;
-const cards = document.getElementsByClassName("mainBoxes");
-const cardPlaceholder = document.getElementById("placeholder");
 
 var currentPage = 1;
-var shuffled = false;
-var waitingCard = false;
 var waitingPage = false;
 var changeThemeFlag = false;
 
@@ -21,14 +18,24 @@ if (darkTheme)
 
 function changeIMG(id)
 {
-    let img = document.getElementById(`images_${id}`);
-    let idx = (images[id].idx+1)%(images[id].srcs.length);
+    const top = document.getElementById(`images_${id}Top`);
+    const bottom = document.getElementById(`images_${id}Bottom`);
+    let idx = (images[id].idx + 1) % images[id].srcs.length;
     let src = images[id].srcs[idx];
-    img.style.animationName = "imgChangeIn";
+    top.src = src;
+    top.style.opacity = 1;
+    bottom.style.opacity = 0;
     setTimeout(() => {
-        img.src = src;
-        img.style.animationName = "imgChangeOut";
-    }, 500)
+        top.style.transition = "none";
+        bottom.style.transition = "none";
+        bottom.src = src;
+        bottom.style.opacity = 1;
+        top.style.opacity = 0;
+        void bottom.offsetWidth;
+        bottom.style.transition = "";
+        top.style.transition = "";
+        
+    }, 500);
     images[id].idx = idx;
 }
 
@@ -67,6 +74,11 @@ function changeTheme()
 
 }
 
+function slideSidePage()
+{
+    sidePage.style.left = "2.5vw";
+}
+
 function nextPage()
 {
     
@@ -94,19 +106,3 @@ function prevPage()
         
     }
 }
-
-function changeIntroCard()
-{
-    if (!waitingCard)
-    {
-        waitingCard = true;
-        shuffled = !shuffled;
-        cards[+shuffled].childNodes[1].style.animationName = "cardToBack";
-        cards[+(!shuffled)].childNodes[1].style.animationName = "cardToFront";
-        cards[+shuffled].childNodes[1].addEventListener('animationend', () => {
-            waitingCard=false;
-        });
-    }
-}
-
-cardPlaceholder.addEventListener("mouseenter", changeIntroCard);
