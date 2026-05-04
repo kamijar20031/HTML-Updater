@@ -32,7 +32,10 @@
         repeating-conic-gradient(from 30deg,var(--patternLight1) 0 60deg,var(--patternLight2) 0 120deg,var(--patternLight3) 0 50%);
 
     --rootWidth: 1vw;
-
+    --c1Y: light-dark(rgb(225, 212, 27),rgb(170, 160, 22));
+    --c2Y: light-dark(rgb(223, 209, 19),rgb(168, 158, 20));
+    --c1R: rgb(138, 10, 10);
+    --c2R: rgb(136, 8, 8);
     --projectWidth: calc(12rem + 8vw );
     --projectHeight: calc(9rem + 6vw );
     --projectGap: 2vw;
@@ -73,11 +76,12 @@ body
 #sidePage
 {
     position:absolute;
+    max-height: 87%;
     top:5vh;
     left: 100vw;
     width:95vw;
-    background-color: #303030c9;
-    transition: all 1s ease-in-out;
+    background-color: var(--modalBG);
+    transition: all 0.6s ease-in-out;
     border-radius: 2rem;
     backdrop-filter: blur(1rem);
     padding:2rem;
@@ -85,11 +89,18 @@ body
     
 }
 
+#page1
+{
+    height:90%;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
 #welcome 
 {
     padding: 4rem 0;
-    margin-inline: auto;
-    margin-top:25vh;
+    margin: auto;
     width:100%;
     background-color: var(--modalBG);
     box-shadow: 0px 10px 16px 10px rgba(40, 40, 40, 0.279);
@@ -174,7 +185,7 @@ body
     padding: 1rem;
     width:80%;
     margin:auto;
-    max-height: 70vh;
+    max-height: 60vh;
     overflow: scroll;
 }
 .columnText
@@ -225,16 +236,12 @@ body
     scrollbar-width: none;  /* Firefox */
     margin:3vh auto;
     width:50vw;
-    height:70vh;
+    height:60%;
     mask-image: var(--mask);
     overflow:scroll;
     background-color: #202020;
     border-inline: 1px dashed var(--mainGreen);
-        /* specjalne tlo */
     --s: 108px;
-    /* --c1: #151515;
-    --c2: #1a1a1a;
-    --c3: #151515; */
     --_g: 
         var(--patternLight2) 6%  14%,var(--patternLight1) 16% 24%,var(--patternLight2) 26% 34%,var(--patternLight1) 36% 44%,
         var(--patternLight2) 46% 54%,var(--patternLight1) 56% 64%,var(--patternLight2) 66% 74%,var(--patternLight1) 76% 84%,var(--patternLight2) 86% 94%;
@@ -388,6 +395,118 @@ body
         margin-left: 2rem;
     }
 }
+
+
+#contactHead
+{
+    position:fixed;
+    text-align: center;
+        font-size: 10vh;
+    width: 50vw;
+        margin-left: 50vw;
+    color:#151515;
+}
+#contactMore
+{
+    text-align: center;
+    position:fixed;
+    width: 50vw;
+    margin-left: 50vw;
+    margin-top: 15vh;
+    color:#151515;
+}
+#contactMore > a > i
+{
+    font-size: 10vh;
+}
+#contactMore > a > i::before
+{
+    transition: all 0.2s ease-in-out;
+}
+#contactMore > a >i:hover::before 
+{
+    display: inline-block;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+.padInside
+{
+    margin-top: 5.0vmin;
+    border-top: 1vmin dashed rgb(203, 207, 203);
+}
+
+#card1
+{
+    z-index: 1;
+    transform: rotate(5deg);
+    position:fixed;
+    top:70vh;
+    left:-50vw;
+    height:100vw;
+    width:400vw;
+    --s: 93px;
+    background: linear-gradient(atan(-.5), var(--c1Y) 33%, var(--c2Y) 33.5% 66.5%, var(--c1Y) 67%) 0/var(--s) var(--s);
+    transition: all 0.3s ease-in-out;
+}
+#card1:hover
+{
+    top:44vh;
+    left:-47vw;
+}   
+#card2
+{
+    z-index: 2;
+    transform: rotate(-15deg);
+    position:fixed;
+    top:-50vh;
+    left:0vw;
+    height:200vh;
+    width:1000vh;
+    box-shadow: 0px -10px 30px 10px rgba(0, 0, 0, 0.279);
+    --s: 93px;
+    background: linear-gradient(atan(-.5), var(--c1R) 33%, var(--c2R) 33.5% 66.5%, var(--c1R) 67%) 0/var(--s) var(--s);
+}
+
+#page3
+{
+    transform: rotate(-0.3deg);
+    position:fixed;
+    top:99vh;
+    left:-2.5vw;
+    width:105vw;
+    height:100vh;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+    --s: 93px;
+    background: linear-gradient(atan(.5), var(--patternLight2) 33%, var(--patternLight1) 33.5% 66.5%, var(--patternLight2) 67%) 0/var(--s) var(--s);
+}
+
+
+a
+{
+    text-decoration: none;
+    color:inherit;
+}
+
+#theme
+{
+    margin:auto;
+    margin-top:1rem;
+    width:fit-content;
+    text-align: center;
+    font-size: 3rem;
+    transition: 0.2s ease-in-out all;
+    border-radius: 10vw;
+}
+#theme:hover
+{
+    transform: scale(1.05);
+    box-shadow: 0px 2px 10px 1px var(--auxGreen);
+}
+
 @media only screen and (orientation: portrait)
 {
     :root
@@ -424,7 +543,7 @@ body
     }
     .projectTitle
     {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
     .projectTitle:focus
     {
@@ -433,116 +552,37 @@ body
         height:var(--projectHeight);
         bottom:var(--projectHeight);
     }
-}
-
-#contactHead
-{
-    position:fixed;
-    margin-left: 63vw;
-    width:fit-content;
-    font-size: calc(9vh + 1.5vw);
-    color:#151515;
-}
-#contactMore
-{
-    text-align: justify;
-    margin-top: calc(13vh + 3vw);
-    position:fixed;
-    width: calc(48vh + 8vw);
-    margin-left: 54vw;
-    font-size: calc(3vh + 0.5vw);
-    color:#151515;
-}
-.padInside
-{
-    margin-top: 5.0vmin;
-    border-top: 1vmin dashed rgb(203, 207, 203);
-}
-
-#card1
-{
-    z-index: 1;
-    transform: rotate(5deg);
-    position:fixed;
-    top:60vh;
-    left:-50vw;
-    height:100vw;
-    width:400vw;
-    --s: 93px;
-    --c1: rgb(170, 160, 22);
-    --c2: rgb(168, 158, 20);
-    background: linear-gradient(atan(-.5), var(--c1) 33%, var(--c2) 33.5% 66.5%, var(--c1) 67%) 0/var(--s) var(--s);
-    transition: all 0.3s ease-in-out;
-}
-#card1:hover
-{
-    top:35vh;
-    left:-47vw;
-}   
-#card2
-{
-    z-index: 2;
-    transform: rotate(-15deg);
-    position:fixed;
-    top:-50vh;
-    left:0vw;
-    height:200vh;
-    width:1000vh;
-    box-shadow: 0px -10px 30px 10px rgba(0, 0, 0, 0.279);
-    --s: 93px;
-    --c1: rgb(138, 10, 10);
-    --c2: rgb(136, 8, 8);
-    background: linear-gradient(atan(-.5), var(--c1) 33%, var(--c2) 33.5% 66.5%, var(--c1) 67%) 0/var(--s) var(--s);
-}
-
-#page3
-{
-    transform: rotate(-0.3deg);
-    position:fixed;
-    top:99vh;
-    left:-2.5vw;
-    width:105vw;
-    height:100vh;
-    animation-duration: 0.6s;
-    animation-fill-mode: forwards;
-    overflow: hidden;
-    --s: 93px;
-    --c1: rgb(39, 37, 35);
-    --c2:rgb(37, 35, 33);
-    background: linear-gradient(atan(.5), var(--c1) 33%, var(--c2) 33.5% 66.5%, var(--c1) 67%) 0/var(--s) var(--s);
-}
-
-
-@media (orientation: portrait) {
     .mainBoxes
     {
         width: 80vw;
         height: 70vh;
     }
+    #card1
+    {
+        top:80vh;
+        left:-40vw;
+        height:100vh;
+        width:500vh;
+    }
+    #card1:hover
+    {
+        top:60vh;
+        left:-37vw;
+    }   
+    #contactMore
+    {
+        margin-top: 13vh;
+    width: 50vw;
+    margin-left: 50vw;
+    }
+    #contactMore > a > i
+    {
+        font-size: 6vh;
+    }
+
 }
 
 
-a
-{
-    text-decoration: none;
-    color:inherit;
-}
-
-#theme
-{
-    margin:auto;
-    margin-top:1rem;
-    width:fit-content;
-    text-align: center;
-    font-size: 3rem;
-    transition: 0.2s ease-in-out all;
-    border-radius: 10vw;
-}
-#theme:hover
-{
-    transform: scale(1.05);
-    box-shadow: 0px 2px 10px 1px var(--auxGreen);
-}
 
 @keyframes animateBG1
 {

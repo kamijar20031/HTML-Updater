@@ -17,7 +17,7 @@
                     
                     <div id='arrowBG' onclick="slideSidePage()"><div id="arrow">O mnie</div></div>
             </div>
-            <div id="bg1"></div>
+            <div id="bg1" onClick="slideSidePageBack()"></div>
             <div id="sidePage">
                     <div class="welcomeHead">O MNIE</div>
                     <div id="textWrapper">
@@ -28,7 +28,7 @@
                             Od samego początku najbardziej interesowały mnie aspekty GameDevu oraz programowania aplikacji internetowych. Po drodze doszły umiejętności obsługi domowego serwera bazowanego na systemie Linux (co umożliwiło mi m.in. stawianie własnych stron internetowych), zainteresowanie sieciami neuronowymi, które stanowić będą główny temat mojej pracy inżynierskiej oraz zaznajomienie z funkcjonowaniem mikrokontrolerów takich jak ESP32 i projektowania urządzeń, które by je wykorzystywały. W wolnym czasie rozwijam swoją wiedzę w dziedzinach, które pozwałałyby mi na tworzenie przydatnego lub interesującego mnie oprogramowania - gry, usługi rozszerzającego mojego HomeLaba i wiele innych.
                         </div>
                         <div id="zdjecie">
-                            <img src="https://media.newyorker.com/photos/59095bb86552fa0be682d9d0/master/pass/Monkey-Selfie.jpg">
+                            <img src="zdjecie/zdjecie.png">
                         </div>
                     </div>
                     <div id='arrowBG' onclick="nextPage()"><div id="arrow">Moje projekty</div></div>
@@ -38,7 +38,8 @@
             <div id="arrowBG" onclick="prevPage()"><div id="arrow"></div>&#8593;</div>
             <div id="projectContainer">
                 <div id="projectRoot">
-                    {PROJECT DATA}
+                    <div class='yearRow'><div>2023</div><div>2023</div></div>
+                        {PROJECT DATA}
                 </div>
             </div>
             <div id="arrowBG" onclick="nextPage()"><div id="arrow"></div>&#8595;</div>
@@ -50,7 +51,7 @@
                 <div id="card1">
                     <div class="padInside">
                         <div id="contactHead">Kontakt</div>
-                        <div id="contactMore">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</div>
+                        <div id="contactMore"><a target="_blank" href="https://www.linkedin.com/in/kamil-jarocki-07487b403/"><i class='icon-linkedin-squared'></i></a><a target="_blank" href="https://github.com/kamijar20031"><i class='icon-github-circled'></i></a><a id="noRobots"><i class='icon-mail-alt'></i></a></div>
                     </div>
 
                 </div>

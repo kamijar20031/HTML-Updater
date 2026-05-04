@@ -99,7 +99,7 @@ if data!=memory or conf!=memConf:
         projectCode += div.getCode()
     htmlData = htmlData.replace("{PROJECT DATA}", projectCode)
 
-    files = ["main.js", "styles.css"]
+    files = ["main.js", "styles.css", "none.png"]
     for file in files:
         pathToFile = os.path.join(OUTPUT_DIR, file)
         pathCopy = os.path.join(TEMPLATE_DIR, file)

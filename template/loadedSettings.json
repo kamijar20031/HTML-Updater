@@ -1,23 +1,63 @@
 [
   {
-    "createdAt": "2024-05-18T12:58:49Z",
-    "description": "Strona ukazująca moje portfolio, generowana przez HTML-Updater",
-    "homepageUrl": "https://kamijar20031.github.io/",
+    "createdAt": "2025-06-29T21:42:56Z",
+    "description": "Aplikacja webowa działająca jako typowy task manager z harmonogramem i Discordowymi powiadomieniami",
+    "homepageUrl": "https://tasks.rogalrogalrogalrogal.online/",
     "languages": [
       {
-        "size": 14327,
+        "size": 15627,
         "node": {
-          "name": "CSS"
+          "name": "Python"
         }
       },
       {
-        "size": 10135,
+        "size": 35454,
+        "node": {
+          "name": "JavaScript"
+        }
+      },
+      {
+        "size": 366,
         "node": {
           "name": "HTML"
         }
       },
       {
-        "size": 3656,
+        "size": 10863,
+        "node": {
+          "name": "CSS"
+        }
+      },
+      {
+        "size": 743,
+        "node": {
+          "name": "Shell"
+        }
+      }
+    ],
+    "name": "rogalTasks",
+    "url": "https://github.com/kamijar20031/rogalTasks",
+    "images": "https://github.com/user-attachments/assets/cb6a7e0f-f6d4-4df8-8bca-7fa99d7abaf0\nhttps://github.com/user-attachments/assets/65bc2d46-1521-4d3b-9fef-66289d784739"
+  },
+  {
+    "createdAt": "2024-05-18T12:58:49Z",
+    "description": "Strona ukazująca moje portfolio, generowana przez HTML-Updater",
+    "homepageUrl": "https://kamijar20031.github.io/",
+    "languages": [
+      {
+        "size": 15028,
+        "node": {
+          "name": "CSS"
+        }
+      },
+      {
+        "size": 10072,
+        "node": {
+          "name": "HTML"
+        }
+      },
+      {
+        "size": 3851,
         "node": {
           "name": "JavaScript"
         }
@@ -25,7 +65,63 @@
     ],
     "name": "KamiJar20031.github.io",
     "url": "https://github.com/kamijar20031/KamiJar20031.github.io",
-    "images": ""
+    "images": "https://github.com/user-attachments/assets/2f1c4fc5-52e1-4db1-a7eb-29a62f6f448f"
+  },
+  {
+    "createdAt": "2026-03-09T20:10:23Z",
+    "description": "Task manager na telefon - w trakcie tworzenia",
+    "homepageUrl": "",
+    "languages": [
+      {
+        "size": 82286,
+        "node": {
+          "name": "Kotlin"
+        }
+      }
+    ],
+    "name": "TasksApp-Port",
+    "url": "https://github.com/kamijar20031/TasksApp-Port",
+    "images": "https://github.com/user-attachments/assets/3474efab-3de6-4d90-8916-ec20219a8a42"
+  },
+  {
+    "createdAt": "2023-12-14T11:40:12Z",
+    "description": "Projekt pozwalający na automatyczne aktualizowanie strony odpowiadajacej za moje portfolio",
+    "homepageUrl": "",
+    "languages": [
+      {
+        "size": 4352,
+        "node": {
+          "name": "HTML"
+        }
+      },
+      {
+        "size": 12631,
+        "node": {
+          "name": "CSS"
+        }
+      },
+      {
+        "size": 2957,
+        "node": {
+          "name": "JavaScript"
+        }
+      },
+      {
+        "size": 6021,
+        "node": {
+          "name": "Python"
+        }
+      },
+      {
+        "size": 680,
+        "node": {
+          "name": "Shell"
+        }
+      }
+    ],
+    "name": "HTML-Updater",
+    "url": "https://github.com/kamijar20031/HTML-Updater",
+    "images": "https://github.com/user-attachments/assets/2c22e355-0624-4c74-98ce-cf126f575dc9"
   },
   {
     "createdAt": "2025-10-17T19:02:56Z",
@@ -90,22 +186,6 @@
     "images": "https://github.com/user-attachments/assets/025a4b3d-b745-4423-acd5-544dbe7c4f69"
   },
   {
-    "createdAt": "2026-03-09T20:10:23Z",
-    "description": "",
-    "homepageUrl": "",
-    "languages": [
-      {
-        "size": 49570,
-        "node": {
-          "name": "Kotlin"
-        }
-      }
-    ],
-    "name": "TasksApp-Port",
-    "url": "https://github.com/kamijar20031/TasksApp-Port",
-    "images": ""
-  },
-  {
     "createdAt": "2024-06-20T11:38:35Z",
     "description": "Projekt z pierwszego roku ISSP - gra 2D bazująca na Touhou",
     "homepageUrl": "",
@@ -126,46 +206,6 @@
     "name": "Danmaku-game-base",
     "url": "https://github.com/kamijar20031/Danmaku-game-base",
     "images": "https://github.com/user-attachments/assets/75e8d891-ae9f-47fe-83e9-c4aa98b06819\nhttps://github.com/user-attachments/assets/233e550e-072a-432a-a9af-853716269cbf"
-  },
-  {
-    "createdAt": "2025-06-29T21:42:56Z",
-    "description": "Aplikacja webowa działająca jako typowy task manager z harmonogramem i Discordowymi powiadomieniami",
-    "homepageUrl": "https://tasks.rogalrogalrogalrogal.online/",
-    "languages": [
-      {
-        "size": 13400,
-        "node": {
-          "name": "Python"
-        }
-      },
-      {
-        "size": 32168,
-        "node": {
-          "name": "JavaScript"
-        }
-      },
-      {
-        "size": 366,
-        "node": {
-          "name": "HTML"
-        }
-      },
-      {
-        "size": 10863,
-        "node": {
-          "name": "CSS"
-        }
-      },
-      {
-        "size": 728,
-        "node": {
-          "name": "Shell"
-        }
-      }
-    ],
-    "name": "rogalTasks",
-    "url": "https://github.com/kamijar20031/rogalTasks",
-    "images": "https://github.com/user-attachments/assets/cb6a7e0f-f6d4-4df8-8bca-7fa99d7abaf0\nhttps://github.com/user-attachments/assets/65bc2d46-1521-4d3b-9fef-66289d784739"
   },
   {
     "createdAt": "2024-10-14T11:55:58Z",
@@ -246,46 +286,6 @@
     "name": "rogalLibrarby",
     "url": "https://github.com/kamijar20031/rogalLibrarby",
     "images": "https://github.com/user-attachments/assets/45011ab3-df9f-4dc7-afec-404da7eef9f0\nhttps://github.com/user-attachments/assets/2385afa5-7c04-4953-b137-8d03254f76ae"
-  },
-  {
-    "createdAt": "2023-12-14T11:40:12Z",
-    "description": "Projekt pozwalający na automatyczne aktualizowanie strony odpowiadajacej za moje portfolio",
-    "homepageUrl": "",
-    "languages": [
-      {
-        "size": 2610,
-        "node": {
-          "name": "HTML"
-        }
-      },
-      {
-        "size": 14468,
-        "node": {
-          "name": "CSS"
-        }
-      },
-      {
-        "size": 3157,
-        "node": {
-          "name": "JavaScript"
-        }
-      },
-      {
-        "size": 5703,
-        "node": {
-          "name": "Python"
-        }
-      },
-      {
-        "size": 625,
-        "node": {
-          "name": "Shell"
-        }
-      }
-    ],
-    "name": "HTML-Updater",
-    "url": "https://github.com/kamijar20031/HTML-Updater",
-    "images": "https://github.com/user-attachments/assets/2c22e355-0624-4c74-98ce-cf126f575dc9"
   },
   {
     "createdAt": "2025-09-02T14:21:10Z",

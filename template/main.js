@@ -78,7 +78,10 @@ function slideSidePage()
 {
     sidePage.style.left = "2.5vw";
 }
-
+function slideSidePageBack()
+{
+    sidePage.style.left = "100vw";
+}
 function nextPage()
 {
     
@@ -106,3 +109,6 @@ function prevPage()
         
     }
 }
+const user = "kamijar20031";
+const domain = "gmail.com";
+document.getElementById("noRobots").href = `mailto:${user}@${domain}`;

@@ -7,8 +7,10 @@ gh repo list --visibility "public" --json name | jq -c '.[]' | while read -r rep
     gh repo view $full_name --json url,languages,createdAt,name,description,homepageUrl | jq --arg images "$image_list"  '. + {images: $images}'; 
 done | jq -s '.' > loadedSettings.json
 cd ../
-python3 mainCode/main.py
-python3 mainCode/fromOutputToMainSite.py
+if ! python3 mainCode/main.py | grep "Brak"
+then
+    python3 mainCode/fromOutputToMainSite.py
+fi
 cd "$(jq -r .pagePath config.json)"
 git add -A
 
