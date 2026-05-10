@@ -13,7 +13,7 @@ def downloadImgLocally(url):
             f.write(response.content)
         print("Pobrane")
         imgCount+=1
-        return name
+        return f"../{name}"
     else:
         print(f"Blad: {response.status_code}")
         return downloadImgLocally(url)

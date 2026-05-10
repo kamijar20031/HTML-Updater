@@ -1,0 +1,8 @@
+HELLO!
+Please take a look at my portfolio!
+About me
+ABOUT ME
+I am currently a third year student of ISSP (Applied Computer Science and Measurement Systems) at the University of Wrocław. I have begun my journey with programming at the end of my highschool and I have decided to point myself in that direction, as my interests have steered from biology to IT. I have heard most of the intel regarding the subject from my friends that have attended tech schools with IT backgrounds and grew intrigued, which lead to me creating my very first choppy and unsecure PHP-backed websites, that made me want to delve into these topics even further. I have then gone off to sign up for the courses mentioned earlier and have received high grades for my engagement and rector's scholarships that would further finance my projects - such as the purchase of my home server.
+Since the very start I have been mainly interested in GameDev and the development of web applications. After some time other topics would pique my interest, such as the management of my Linux based home server, that would allow me to host my own web apps and other services, the neural networks, on which I am intending to base my engineering's thesis and the development of microcontroller devices, based mainly on the ESP32 board, and using them for my advantage - like creating custom LED lights that worked based on a time schedule, programmable via a remote. In my free time I delve into any topic that would pique my interest or just improve myself further in ones that I am already familiar with - that would be games, features that would expand my HomeLab and more.
+Personal projects
+Contact me

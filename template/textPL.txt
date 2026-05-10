@@ -1,0 +1,8 @@
+CZEŚĆ!
+Zapraszam do przejrzenia mojego portfolio!
+O mnie
+O MNIE
+Jestem obecnie studentem trzeciego roku Informatyki Stosowanej i Systemów Pomiarowych na Uniwersytecie Wrocławskim. Swoją przygodę z programowaniem rozpocząłem jeszcze w trakcie liceum, gdzie z kierunku biologiczno-chemicznego zacząłem kierować swoje zainteresowania w stronę informatyki. Swoją wiedzę czerpałem z relacji kolegów uczęszczających do techników informatycznych i po kilku latach wschłuchiwania się w ich rozmowy i samodzielnych prób programowania postanowiłem samemu wejść w ten głęboki temat podejmując podany wcześniej kierunek studiów. W trakcie nauki osiągałem wysokie wyniki, umożliwiające mi pobieranie stypendium rektora, które stanowiło główną pożywkę dla mojego samorozwoju.
+Od samego początku najbardziej interesowały mnie aspekty GameDevu oraz programowania aplikacji internetowych. Po drodze doszły umiejętności obsługi domowego serwera bazowanego na systemie Linux (co umożliwiło mi m.in. stawianie własnych stron internetowych), zainteresowanie sieciami neuronowymi, które stanowić będą główny temat mojej pracy inżynierskiej oraz zaznajomienie z funkcjonowaniem mikrokontrolerów takich jak ESP32 i projektowania urządzeń, które by je wykorzystywały. W wolnym czasie rozwijam swoją wiedzę w dziedzinach, które pozwałałyby mi na tworzenie przydatnego lub interesującego mnie oprogramowania - gry, usługi rozszerzającego mojego HomeLaba i wiele innych.
+Moje projekty
+Kontakt

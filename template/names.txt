@@ -1,0 +1,8 @@
+{welcome1}
+{welcome2}
+{about1}
+{about2}
+{infoText1}
+{infoText2}
+{projects}
+{contact}

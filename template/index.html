@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Kamil Jarocki - Portfolio</title>
+        <link rel="icon" href="../icon.png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="styles.css">
-         <link rel="stylesheet" href="css/fontello.css">
+        <link rel="stylesheet" href="../styles.css">
+         <link rel="stylesheet" href="../css/fontello.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
@@ -11,27 +13,27 @@
     <body>
         <div id="page1">
             <div id="welcome">
-                    <div class="welcomeHead">CZEŚĆ!</div>
-                    <div id='welcomeText'>Zapraszam do przejrzenia mojego portfolio!</div>
+                    <div class="welcomeHead">{welcome1}</div>
+                    <div id='welcomeText'>{welcome2}</div>
                     <div id="theme" onclick="changeTheme()"><i class='icon-moon'></i></div>
                     
-                    <div id='arrowBG' onclick="slideSidePage()"><div id="arrow">O mnie</div></div>
+                    <div id='arrowBG' onclick="slideSidePage()"><div id="arrow">{about1}</div></div>
             </div>
             <div id="bg1" onClick="slideSidePageBack()"></div>
             <div id="sidePage">
-                    <div class="welcomeHead">O MNIE</div>
+                    <div class="welcomeHead">{about2}</div>
                     <div id="textWrapper">
                         <div class="columnText">
-                            Jestem obecnie studentem trzeciego roku Informatyki Stosowanej i Systemów Pomiarowych na Uniwersytecie Wrocławskim. Swoją przygodę z programowaniem rozpocząłem jeszcze w trakcie liceum, gdzie z kierunku biologiczno-chemicznego zacząłem kierować swoje zainteresowania w stronę informatyki. Swoją wiedzę czerpałem z relacji kolegów uczęszczających do techników informatycznych i po kilku latach wschłuchiwania się w ich rozmowy i samodzielnych prób programowania postanowiłem samemu wejść w ten głęboki temat podejmując podany wcześniej kierunek studiów. W trakcie nauki osiągałem wysokie wyniki, umożliwiające mi pobieranie stypendium rektora, które stanowiło główną pożywkę dla mojego samorozwoju.
+                            {infoText1}
                         </div>
                         <div class="columnText">
-                            Od samego początku najbardziej interesowały mnie aspekty GameDevu oraz programowania aplikacji internetowych. Po drodze doszły umiejętności obsługi domowego serwera bazowanego na systemie Linux (co umożliwiło mi m.in. stawianie własnych stron internetowych), zainteresowanie sieciami neuronowymi, które stanowić będą główny temat mojej pracy inżynierskiej oraz zaznajomienie z funkcjonowaniem mikrokontrolerów takich jak ESP32 i projektowania urządzeń, które by je wykorzystywały. W wolnym czasie rozwijam swoją wiedzę w dziedzinach, które pozwałałyby mi na tworzenie przydatnego lub interesującego mnie oprogramowania - gry, usługi rozszerzającego mojego HomeLaba i wiele innych.
+                            {infoText2}
                         </div>
                         <div id="zdjecie">
-                            <img src="zdjecie/zdjecie.png">
+                            <img src="../zdjecie/zdjecie.png">
                         </div>
                     </div>
-                    <div id='arrowBG' onclick="nextPage()"><div id="arrow">Moje projekty</div></div>
+                    <div id='arrowBG' onclick="nextPage()"><div id="arrow">{projects}</div></div>
             </div>
         </div>
         <div id="page2">
@@ -41,7 +43,7 @@
                         {PROJECT DATA}
                 </div>
             </div>
-            <div id="arrowBG" onclick="nextPage()"><div id="arrow"></div>&#8595;</div>
+            <div id="arrowBG" onclick="nextPage()"><div id="arrow">{contact}</div></div>
         </div>
         <div id="page3">
             <div id="arrowBG" onclick="prevPage()"><div id="arrow"></div>&#8593;</div>
@@ -49,7 +51,7 @@
 
                 <div id="card1">
                     <div class="padInside">
-                        <div id="contactHead">Kontakt</div>
+                        <div id="contactHead">{contact}</div>
                         <div id="contactMore"><a target="_blank" href="https://www.linkedin.com/in/kamil-jarocki-07487b403/"><i class='icon-linkedin-squared'></i></a><a target="_blank" href="https://github.com/kamijar20031"><i class='icon-github-circled'></i></a><a id="noRobots"><i class='icon-mail-alt'></i></a></div>
                     </div>
 
@@ -60,5 +62,5 @@
             </div>
         </div>
     </body>
-    <script src="main.js"></script>
+    <script src="../main.js"></script>
 </html>

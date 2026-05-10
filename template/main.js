@@ -5,7 +5,7 @@ const numPages = pages.length;
 var currentPage = 1;
 var waitingPage = false;
 var changeThemeFlag = false;
-
+var changing = false;
 var r = document.querySelector(':root');
 
 var darkTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -18,25 +18,30 @@ if (darkTheme)
 
 function changeIMG(id)
 {
-    const top = document.getElementById(`images_${id}Top`);
-    const bottom = document.getElementById(`images_${id}Bottom`);
-    let idx = (images[id].idx + 1) % images[id].srcs.length;
-    let src = images[id].srcs[idx];
-    top.src = src;
-    top.style.opacity = 1;
-    bottom.style.opacity = 0;
-    setTimeout(() => {
-        top.style.transition = "none";
-        bottom.style.transition = "none";
-        bottom.src = src;
-        bottom.style.opacity = 1;
-        top.style.opacity = 0;
-        void bottom.offsetWidth;
-        bottom.style.transition = "";
-        top.style.transition = "";
-        
-    }, 500);
-    images[id].idx = idx;
+    if (!changing)
+    {
+        const top = document.getElementById(`images_${id}Top`);
+        const bottom = document.getElementById(`images_${id}Bottom`);
+        let idx = (images[id].idx + 1) % images[id].srcs.length;
+        let src = images[id].srcs[idx];
+        top.setAttribute("src", src);
+        top.style.opacity = 1;
+        bottom.style.opacity = 0;
+        changing = true;
+        setTimeout(() => {
+            top.style.transition = "none";
+            bottom.style.transition = "none";
+            bottom.src = src;
+            bottom.style.opacity = 1;
+            top.style.opacity = 0;
+            void bottom.offsetWidth;
+            bottom.style.transition = "";
+            top.style.transition = "";
+            changing = false;
+        }, 500);
+        images[id].idx = idx;
+    }
+
 }
 
 function changeThemeInner()

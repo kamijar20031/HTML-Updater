@@ -40,6 +40,17 @@ memConf = ""
 with open(os.path.join(OUTPUT_DIR, MEM_CONFIG)) as json_data:
     memConf = json_data.read()
 
+eng = []
+with open(os.path.join(TEMPLATE_DIR, "textENG.txt")) as datas:
+    eng = [line.strip("\n") for line in datas]
+
+pl = []
+with open(os.path.join(TEMPLATE_DIR, "textPL.txt")) as datas:
+    pl = [line.strip("\n") for line in datas]
+names = []
+with open(os.path.join(TEMPLATE_DIR, "names.txt")) as datas:
+    names = [line.strip("\n") for line in datas]
+
 if data!=memory or conf!=memConf:
     with open(os.path.join(OUTPUT_DIR, MEM_FILE), 'w') as output:
         output.write(data)
@@ -59,6 +70,7 @@ if data!=memory or conf!=memConf:
     data.sort(key=sorter)
 
     divs = []
+    divsEng = []
     crntDate =""
     javascript = "const images = ["
     id = 0
@@ -70,6 +82,7 @@ if data!=memory or conf!=memConf:
         if crntDate!= repo["createdAt"]:
             crntDate= repo["createdAt"]
             divs.append(TimeRow(crntDate))
+            divsEng.append(TimeRow(crntDate))
         if repo["images"] != "":
             repo["images"] = repo["images"].split("\n")
             for i in range(len(repo["images"])):
@@ -80,8 +93,8 @@ if data!=memory or conf!=memConf:
             javascript += "{srcs:" + inside + ", idx:0},\n"
             
         else:
-            javascript += "{srcs: ['none.png'], idx:0},\n"
-            repo["images"] = ["none.png", "none.png"]
+            javascript += "{srcs: ['../none.png'], idx:0},\n"
+            repo["images"] = ["../none.png", "../none.png"]
         repo["name"] = repo["name"].replace("-", " ")
         numLang = len(repo["languages"])
         if not isinstance(repo["languages"][0], str):
@@ -90,14 +103,24 @@ if data!=memory or conf!=memConf:
             repo["languages"] = repo["languages"][:3]
         if repo["homepageUrl"]!="":
             repo["url"] = repo["homepageUrl"]
-        divs.append(Project(repo["name"], repo["languages"], repo["images"], repo["url"], id, repo["description"]))
+        descPL = repo["description"][:repo["description"].find("[ENG]")].replace("[PL] ", "")
+        descENG = repo["description"][repo["description"].find("[ENG]"):].replace("[ENG] ", "")
+        divs.append(Project(repo["name"], repo["languages"], repo["images"], repo["url"], id, descPL))
+        divsEng.append(Project(repo["name"], repo["languages"], repo["images"], repo["url"], id, descENG))
         id+=1
     javascript+="];\n"
     ""
-    projectCode = ""
+    projectCodePL = ""
     for div in divs:
-        projectCode += div.getCode()
-    htmlData = htmlData.replace("{PROJECT DATA}", projectCode)
+        projectCodePL += div.getCode()
+    projectCodeENG = ""
+    for div in divsEng:
+        projectCodeENG += div.getCode()
+    plData = htmlData.replace("{PROJECT DATA}", projectCodePL)
+    engData = htmlData.replace("{PROJECT DATA}", projectCodeENG)
+    for i in range(len(names)):
+        engData = engData.replace(names[i], eng[i])
+        plData = plData.replace(names[i], pl[i])
 
     files = ["main.js", "styles.css", "none.png"]
     for file in files:
@@ -113,7 +136,13 @@ if data!=memory or conf!=memConf:
     with open(os.path.join(OUTPUT_DIR, "main.js"), "w") as jsOUT:
         jsOUT.write(javascript)
 
-    with open(os.path.join(OUTPUT_DIR, "index.html"), "w") as output:
-        output.write(htmlData)
+    with open(os.path.join(OUTPUT_DIR,"eng", "index.html"), "w") as output:
+        output.write(engData)
+    with open(os.path.join(OUTPUT_DIR,"pl", "index.html"), "w") as output:
+        output.write(plData)
+    lang = os.path.join(OUTPUT_DIR, "index.html")
+    if os.path.isfile(lang):
+        os.remove(lang)
+    shutil.copyfile(os.path.join(TEMPLATE_DIR, "lang.html"), lang)
 else:
     print("Brak zmian!")

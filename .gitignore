@@ -1,3 +1,5 @@
 output/
 mainCode/__pycache__/
 *.pyc
+output/imgs/
+imgs/

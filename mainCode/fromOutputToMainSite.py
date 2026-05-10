@@ -7,7 +7,7 @@ with open(os.path.join(MAIN_DIR, "config.json"), 'r') as jsoner:
     if os.path.exists(os.path.join(location, "imgs")):
         shutil.rmtree(os.path.join(location, "imgs"))
     shutil.copytree(os.path.join(OUTPUT_DIR, "imgs"),os.path.join(location, "imgs"))
-    files = ["index.html", "main.js", "styles.css", "none.png"]
+    files = ["index.html", "main.js", "styles.css", "none.png", "pl/index.html", "eng/index.html"]
     for file in files:
         if os.path.exists(os.path.join(location, file)) and os.path.exists(os.path.join(OUTPUT_DIR, file)):
             os.remove(os.path.join(location, file))
