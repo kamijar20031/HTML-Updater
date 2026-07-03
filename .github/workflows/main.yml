@@ -13,4 +13,10 @@ jobs:
     steps:
       - run: print("Hello Python World")
         shell: python
+  say-hello-actions:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/hello-world-javascript-action@v1
+        with:
+          who-to-greet: "testtesttest"
       
